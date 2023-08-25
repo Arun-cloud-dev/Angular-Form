@@ -3,14 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MyFirstCompComponent } from './my-first-comp/my-first-comp.component';
+import { MySecondCompComponent } from './my-second-comp/my-second-comp.component';
+import { FormsModule } from '@angular/forms';
 
-@NgModule({
+@NgModule({ //decorator and a bench of properties
   declarations: [
-    AppComponent
+    AppComponent, // declare components of application
+    MyFirstCompComponent, MySecondCompComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,// routing module
+    FormsModule// use for form module
   ],
   providers: [],
   bootstrap: [AppComponent]
