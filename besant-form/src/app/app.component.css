@@ -1,0 +1,32 @@
+/* Apply some basic styling to the navigation bar */
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center; /* Center-align the text */
+}
+
+/* Style the navigation list */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center-align the list items */
+}
+
+/* Style the navigation list items */
+nav li {
+  margin-right: 20px;
+}
+
+/* Style the navigation links */
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Change link color on hover */
+nav a:hover {
+  color: #ffd700; /* Change to your desired hover color */
+}
