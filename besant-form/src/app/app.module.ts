@@ -6,11 +6,12 @@ import { AppComponent } from './app.component';
 import { MyFirstCompComponent } from './my-first-comp/my-first-comp.component';
 import { MySecondCompComponent } from './my-second-comp/my-second-comp.component';
 import { FormsModule } from '@angular/forms';
+import { MessageDetailsComponent } from './message-details/message-details.component';
 
 @NgModule({ //decorator and a bench of properties
   declarations: [
     AppComponent, // declare components of application
-    MyFirstCompComponent, MySecondCompComponent
+    MyFirstCompComponent, MySecondCompComponent, MessageDetailsComponent
   ],
   imports: [
     BrowserModule,

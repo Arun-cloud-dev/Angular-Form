@@ -61,3 +61,9 @@ button[type="submit"] {
 .form-container strong {
   color: #333;
 }
+.flex-container{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+flex-wrap: wrap;
+}

@@ -2,20 +2,31 @@
 
 import { Component } from '@angular/core';
 
-@Component({ //component anotation takes a object
+@Component({
+  //component anotation takes a object
   selector: 'app-my-first-comp', //
   templateUrl: './my-first-comp.component.html', //you can point to html file or use templete
-  styleUrls: ['./my-first-comp.component.css'] // list of style files
+  styleUrls: ['./my-first-comp.component.css'], // list of style files
 })
 export class MyFirstCompComponent {
   //varaiable
   name: string = '';
   email: string = '';
   message: string = '';
-  onSubmitted: boolean = false;
+  isSubmitted: boolean = false;
+  messages: Array<any> = [];
 
+  onSubmit(): void {
+    this.isSubmitted = true;
+    this.messages.push({
+      name: this.name,
+      email: this.email,
+      message: this.message,
+    });
 
-  onSubmit(): void{
-    this.onSubmitted =true;
+    console.log(this.message);
+  }
+  deleteMessage(index: number) {
+    this.messages.splice(index,1);
   }
 }
