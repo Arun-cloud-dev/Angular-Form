@@ -1,6 +1,7 @@
 //global overview of our component
 
 import { Component } from '@angular/core';
+import { MyFirstService } from '../Services/my-first.service';
 
 @Component({
   //component anotation takes a object
@@ -16,9 +17,18 @@ export class MyFirstCompComponent {
   isSubmitted: boolean = false;
   messages: Array<any> = [];
 
+
+  constructor(
+    private service: MyFirstService
+  )
+  {
+    this.messages = this.service.getAllMessages();
+    this.isSubmitted = this.messages.length > 0;
+  }
+
   onSubmit(): void {
     this.isSubmitted = true;
-    this.messages.push({
+    this.service.insert({
       name: this.name,
       email: this.email,
       message: this.message,
@@ -27,6 +37,6 @@ export class MyFirstCompComponent {
     console.log(this.message);
   }
   deleteMessage(index: number) {
-    this.messages.splice(index,1);
+    this.service.deleteMessage(index);
   }
 }
